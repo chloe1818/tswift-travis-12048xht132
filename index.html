@@ -1,243 +1,367 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Celebrity Scoop Daily — Taylor Swift and Travis Kelce BREAKUP</title>
-  <style>
-    :root{
-      --bg:#0f0f10;
-      --panel:#1a1a1d;
-      --text:#f5f5f7;
-      --muted:#b8b8c2;
-      --accent:#e11d48;
-      --gold:#fbbf24;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,#111 0%, #1a1a1d 100%);
-      color:var(--text);
-    }
-    .topbar{
-      background:#000;
-      border-bottom:4px solid var(--gold);
-      padding:14px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-    .logo{
-      font-weight:900;
-      letter-spacing:1px;
-      font-size:34px;
-      color:var(--gold);
-      text-transform:uppercase;
-    }
-    .tag{
-      background:var(--accent);
-      color:white;
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:14px;
-    }
-    .wrap{
-      max-width:980px;
-      margin:28px auto;
-      padding:0 20px 40px;
-    }
-    .notice{
-      background:#3b0d16;
-      border:2px solid #fb7185;
-      color:#ffe4e6;
-      padding:16px 18px;
-      border-radius:14px;
-      font-weight:800;
-      text-align:center;
-      font-size:18px;
-      margin-bottom:22px;
-    }
-    .hero{
-      background:var(--panel);
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:0 16px 40px rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.06);
-    }
-    .hero-head{
-      padding:26px 26px 12px;
-    }
-    .kicker{
-      color:#fb7185;
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-    }
-    h1{
-      margin:0 0 14px;
-      font-size:clamp(32px, 6vw, 56px);
-      line-height:1.02;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:18px;
-      line-height:1.5;
-      margin-bottom:14px;
-    }
-    .meta{
-      color:#9ca3af;
-      font-size:14px;
-      margin-bottom:8px;
-    }
-    .image{
-      position:relative;
-      min-height:330px;
-      background:
-        radial-gradient(circle at 20% 25%, rgba(251,191,36,.25), transparent 20%),
-        radial-gradient(circle at 80% 20%, rgba(225,29,72,.22), transparent 18%),
-        linear-gradient(135deg,#2a2a31, #121216);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-    }
-    .image-inner{
-      width:min(760px, 95%);
-      min-height:260px;
-      border:2px dashed rgba(255,255,255,.2);
-      border-radius:20px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:30px;
-      color:#d4d4d8;
-      font-size:22px;
-      font-weight:700;
-    }
-    .stamp{
-      position:absolute;
-      top:18px;
-      right:18px;
-      background:#fff;
-      color:#b91c1c;
-      border:4px solid #b91c1c;
-      padding:10px 16px;
-      transform:rotate(-10deg);
-      font-weight:900;
-      font-size:28px;
-      letter-spacing:.04em;
-      box-shadow:0 8px 24px rgba(0,0,0,.3);
-    }
-    .content{
-      padding:24px 26px 34px;
-      font-size:18px;
-      line-height:1.7;
-      color:#ececf1;
-    }
-    .content p{margin:0 0 16px}
-    .highlight{
-      color:#fda4af;
-      font-weight:800;
-    }
-    .footer{
-      margin-top:24px;
-      text-align:center;
-      color:#9ca3af;
-      font-size:14px;
-    }
-    .btns{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:24px;
-    }
-    .btn{
-      text-decoration:none;
-      padding:12px 16px;
-      border-radius:12px;
-      font-weight:800;
-      border:1px solid rgba(255,255,255,.12);
-    }
-    .btn.primary{
-      background:var(--accent);
-      color:white;
-    }
-    .btn.secondary{
-      background:#27272a;
-      color:#fff;
-    }
-    .small{
-      font-size:13px;
-      color:#a1a1aa;
-      margin-top:14px;
-    }
-  </style>
-</head>
-<body>
-  <div class="topbar">
-    <div class="logo">Celebrity Scoop Daily</div>
-    <div class="tag">SATIRE • APRIL FOOLS</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body-wrap {
+    display: block;
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: var(--color-text-primary);
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .masthead {
+    border-bottom: 3px double var(--color-border-primary);
+    padding: 16px 0 12px;
+    text-align: center;
+  }
+
+  .masthead-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: 6px;
+    font-family: var(--font-sans);
+  }
+
+  .masthead-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--color-text-primary);
+  }
+
+  .masthead-tagline {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-top: 4px;
+    font-family: var(--font-sans);
+  }
+
+  .dateline-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-family: var(--font-sans);
+    color: var(--color-text-secondary);
+    padding: 6px 0;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    margin-bottom: 16px;
+  }
+
+  .breaking-tag {
+    display: inline-block;
+    background: #b91c1c;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    font-family: var(--font-sans);
+    margin-bottom: 10px;
+  }
+
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+    margin-bottom: 10px;
+  }
+
+  .deck {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: 14px;
+    border-left: 3px solid var(--color-border-tertiary);
+    padding-left: 12px;
+  }
+
+  .byline {
+    font-size: 12px;
+    font-family: var(--font-sans);
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .byline strong { color: var(--color-text-primary); }
+
+  .cheese-graphic {
+    width: 100%;
+    background: #fef3c7;
+    border: 0.5px solid #fcd34d;
+    border-radius: 4px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .cheese-emoji-row {
+    font-size: 40px;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 12px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-family: var(--font-sans);
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .article-body p {
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    color: var(--color-text-primary);
+  }
+
+  .pullquote {
+    border-top: 2px solid var(--color-text-primary);
+    border-bottom: 2px solid var(--color-text-primary);
+    padding: 16px 0;
+    margin: 24px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--color-text-primary);
+    text-align: center;
+  }
+
+  .reveal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .reveal-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .reveal-card {
+    background: #fef9c3;
+    border: 4px solid #eab308;
+    border-radius: 16px;
+    padding: 40px 48px;
+    text-align: center;
+    max-width: 460px;
+    width: 90%;
+    transform: scale(0.85) rotate(-2deg);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .reveal-overlay.visible .reveal-card {
+    transform: scale(1) rotate(0deg);
+  }
+
+  .april-icon {
+    font-size: 64px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .april-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #854d0e;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .april-sub {
+    font-size: 18px;
+    color: #92400e;
+    font-style: italic;
+    font-family: 'Source Serif 4', serif;
+    margin-bottom: 20px;
+  }
+
+  .april-detail {
+    font-size: 14px;
+    color: #78350f;
+    font-family: var(--font-sans);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .close-btn {
+    background: #eab308;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1c1917;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: background 0.15s;
+  }
+
+  .close-btn:hover { background: #ca8a04; }
+
+  .scroll-note {
+    font-size: 13px;
+    font-family: var(--font-sans);
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 8px 0 4px;
+    font-style: italic;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    margin: 20px 0;
+  }
+</style>
+
+<div style="max-width:780px;margin:0 auto;padding:16px 20px 40px;">
+
+  <div class="masthead">
+    <div class="masthead-eyebrow">Est. 1887</div>
+    <div class="masthead-name">The Wisconsin Gazette</div>
+    <div class="masthead-tagline">All the dairy news that's fit to print</div>
   </div>
 
-  <div class="wrap">
-    <div class="notice">
-      APRIL FOOLS — This page is a joke/parody and not a real news report.
+  <div class="dateline-bar">
+    <span>Wednesday, April 1, 2026</span>
+    <span>Madison, Wisconsin</span>
+    <span>Vol. CXXXIX, No. 91</span>
+  </div>
+
+  <div class="breaking-tag">Breaking News</div>
+
+  <h1 class="headline">Wisconsin Faces Catastrophic Cheese Shortage; Experts Fear "Unprecedented Gouda Gap"</h1>
+
+  <p class="deck">State officials declare a dairy emergency as cheddar supplies plummet to historic lows, leaving grocery shelves bare and fondue enthusiasts in despair.</p>
+
+  <div class="byline">
+    By <strong>Brie Van Camembert</strong>, Staff Reporter &nbsp;|&nbsp; Updated 9:47 a.m. CT &nbsp;|&nbsp; Wisconsin Cheese Bureau
+  </div>
+
+  <div class="cheese-graphic">
+    <div class="cheese-emoji-row">🧀 🧀 🧀</div>
+    <div style="font-family:var(--font-sans);font-size:13px;color:#92400e;font-weight:500;">Wisconsin Cheese Reserve — Current Status</div>
+    <div style="background:#fde68a;border-radius:6px;height:22px;margin:10px 0;position:relative;overflow:hidden;">
+      <div style="background:#b45309;width:8%;height:100%;border-radius:6px;"></div>
+      <div style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:11px;font-family:var(--font-sans);color:#78350f;font-weight:500;">CRITICALLY LOW</div>
     </div>
+    <div style="font-size:11px;font-family:var(--font-sans);color:#a16207;">8% capacity remaining — normal is 94%</div>
+  </div>
 
-    <article class="hero">
-      <div class="hero-head">
-        <div class="kicker">Breaking-ish</div>
-        <h1>Travis Kelce and Taylor Swift Broke Up?!</h1>
-        <div class="sub">
-          Fans were shocked for approximately three seconds… until they noticed the giant
-          <span class="highlight">APRIL FOOLS</span> labels everywhere.
-        </div>
-        <div class="meta">Published April 1 • For laughs only</div>
-      </div>
-
-      <div class="image">
-        <div class="stamp">APRIL FOOLS</div>
-        <div class="image-inner">
-          Put a photo or screenshot here if you want — or leave this as a dramatic headline card.
-        </div>
-      </div>
-
-      <div class="content">
-        <p>
-          In today’s completely unserious celebrity update, rumors swirled that Travis Kelce and Taylor Swift had called it quits.
-          Social media gasped, group chats exploded, and then everyone remembered what day it is.
-        </p>
-
-        <p>
-          That’s right: <span class="highlight">April Fools.</span> This page is intentionally designed as a parody celebrity-news story.
-          It is not affiliated with TMZ and is not presenting real reporting.
-        </p>
-
-        <p>
-          The headline is the prank. The punchline is the giant disclaimer. Please do not take this as factual news.
-        </p>
-
-        <div class="btns">
-          <a class="btn primary" href="#" onclick="alert('APRIL FOOLS 😄'); return false;">Reveal the Joke</a>
-          <a class="btn secondary" href="#" onclick="window.print(); return false;">Print / Save</a>
-        </div>
-
-        <div class="small">
-          Note: This is a satire page inspired by celebrity-news layouts, not a copy of any real outlet.
-        </div>
-      </div>
-    </article>
-
-    <div class="footer">
-      Made as a parody webpage for fun.
+  <div class="stat-bar">
+    <div class="stat-card">
+      <div class="stat-num">-86%</div>
+      <div class="stat-label">Cheddar supply</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">4,200</div>
+      <div class="stat-label">Cows "missing"</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">$47</div>
+      <div class="stat-label">Avg slice price</div>
     </div>
   </div>
-</body>
-</html>
+
+  <div class="article-body">
+    <p>MADISON, Wis. — In what cheese economists are calling "the worst dairy disaster since the Great Brie Blizzard of 1974," Wisconsin's vast cheese reserves have dwindled to alarming levels this week, prompting Governor Havarti Clausen to declare a statewide Dairy State of Emergency on Tuesday morning.</p>
+
+    <p>The shortage, which began quietly in mid-March when several large cheese caves near Sheboygan reported unexplained inventory losses, escalated rapidly overnight Monday when the Wisconsin Artisan Cheese Collective confirmed that the state's famous underground aging facilities were nearly bare.</p>
+
+    <div class="pullquote">"We walked into Cave No. 4 and all that was left was one rogue piece of Muenster and a Post-it note that said 'sorry.'"</div>
+
+    <p>"Fondue is now a luxury item," said Colby Gruyère, 54, a dairy farmer from Green Bay who has spent the past three decades watching his rounds of aged cheddar grow to championship sizes. "My entire stock is just gone. I turned on the news and nearly choked on my cheese curd."</p>
+
+    <p>State officials are urging Wisconsinites to ration their remaining cheese supplies. The National Guard has been deployed to protect the state's final wheel of aged Gouda, currently stored at an undisclosed location believed to be somewhere near Lake Michigan. Armed officers surrounded a Piggly Wiggly in Waukesha overnight after reports of a cheese run left the deli section stripped clean.</p>
+
+    <p>Federal investigators are examining several leads. A suspicious trail of orange powder leading from the I-90 corridor toward Illinois has prompted speculation that a coordinated interstate heist may be to blame, though Chicago Mayor Dana Swissblock denied any involvement, calling the accusations "incredibly gouda-less."</p>
+
+    <p>The economic impact is already being felt. A single slice of mild cheddar reportedly sold on eBay Tuesday night for $63 after a bidding war between seventeen panicked Milwaukee residents. Bakers have begun substituting cream cheese for structural elements in wedding cakes. One Eau Claire man was reportedly arrested for hoarding 400 pounds of pepper jack in his basement.</p>
+
+    <p style="color:var(--color-text-secondary);font-style:italic;font-size:14px;">Scroll down to continue reading...</p>
+  </div>
+
+  <hr class="divider">
+  <div class="scroll-note">↓ Full report continues below ↓</div>
+  <hr class="divider" style="margin-top:12px;">
+
+  <div class="article-body" style="margin-top:16px;">
+    <p>The Wisconsin Department of Agriculture has convened an emergency task force, the Committee on Restoring Essential Dairy, though officials admitted the acronym was an unfortunate oversight. A press conference scheduled for noon was briefly postponed when a reporter asked Governor Clausen what he planned to eat for lunch and he began to quietly weep.</p>
+
+    <p>Experts warn this crisis could last well into summer unless supplies are replenished. "We are looking at a state without cheese," said Dr. Fontina Manchego, a dairy economist at UW-Madison. "That's not Wisconsin. That's just... Minnesota."</p>
+  </div>
+
+  <div id="reveal-trigger" style="height:1px;"></div>
+</div>
+
+<div class="reveal-overlay" id="overlay">
+  <div class="reveal-card">
+    <span class="april-icon">🎉</span>
+    <div class="april-headline">April Fools!</div>
+    <div class="april-sub">Wisconsin's cheese is just fine.</div>
+    <div class="april-detail">
+      No cheese shortage. No cheese caves. No rogue piece of Muenster.<br><br>
+      Wisconsin actually produces <strong>over 3 billion pounds</strong> of cheese per year. Your cheddar is safe. 🧀
+    </div>
+    <button class="close-btn" onclick="document.getElementById('overlay').classList.remove('visible')">Ha! Got me 😄</button>
+  </div>
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById('overlay').classList.add('visible');
+  }, 4500);
+</script>
