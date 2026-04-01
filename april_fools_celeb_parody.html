@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celebrity Scoop Daily — April Fools</title>
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --panel:#1a1a1d;
+      --text:#f5f5f7;
+      --muted:#b8b8c2;
+      --accent:#e11d48;
+      --gold:#fbbf24;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#111 0%, #1a1a1d 100%);
+      color:var(--text);
+    }
+    .topbar{
+      background:#000;
+      border-bottom:4px solid var(--gold);
+      padding:14px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .logo{
+      font-weight:900;
+      letter-spacing:1px;
+      font-size:34px;
+      color:var(--gold);
+      text-transform:uppercase;
+    }
+    .tag{
+      background:var(--accent);
+      color:white;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:14px;
+    }
+    .wrap{
+      max-width:980px;
+      margin:28px auto;
+      padding:0 20px 40px;
+    }
+    .notice{
+      background:#3b0d16;
+      border:2px solid #fb7185;
+      color:#ffe4e6;
+      padding:16px 18px;
+      border-radius:14px;
+      font-weight:800;
+      text-align:center;
+      font-size:18px;
+      margin-bottom:22px;
+    }
+    .hero{
+      background:var(--panel);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 16px 40px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.06);
+    }
+    .hero-head{
+      padding:26px 26px 12px;
+    }
+    .kicker{
+      color:#fb7185;
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(32px, 6vw, 56px);
+      line-height:1.02;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.5;
+      margin-bottom:14px;
+    }
+    .meta{
+      color:#9ca3af;
+      font-size:14px;
+      margin-bottom:8px;
+    }
+    .image{
+      position:relative;
+      min-height:330px;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(251,191,36,.25), transparent 20%),
+        radial-gradient(circle at 80% 20%, rgba(225,29,72,.22), transparent 18%),
+        linear-gradient(135deg,#2a2a31, #121216);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+    .image-inner{
+      width:min(760px, 95%);
+      min-height:260px;
+      border:2px dashed rgba(255,255,255,.2);
+      border-radius:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:30px;
+      color:#d4d4d8;
+      font-size:22px;
+      font-weight:700;
+    }
+    .stamp{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:#fff;
+      color:#b91c1c;
+      border:4px solid #b91c1c;
+      padding:10px 16px;
+      transform:rotate(-10deg);
+      font-weight:900;
+      font-size:28px;
+      letter-spacing:.04em;
+      box-shadow:0 8px 24px rgba(0,0,0,.3);
+    }
+    .content{
+      padding:24px 26px 34px;
+      font-size:18px;
+      line-height:1.7;
+      color:#ececf1;
+    }
+    .content p{margin:0 0 16px}
+    .highlight{
+      color:#fda4af;
+      font-weight:800;
+    }
+    .footer{
+      margin-top:24px;
+      text-align:center;
+      color:#9ca3af;
+      font-size:14px;
+    }
+    .btns{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+    .btn{
+      text-decoration:none;
+      padding:12px 16px;
+      border-radius:12px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:white;
+    }
+    .btn.secondary{
+      background:#27272a;
+      color:#fff;
+    }
+    .small{
+      font-size:13px;
+      color:#a1a1aa;
+      margin-top:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">Celebrity Scoop Daily</div>
+    <div class="tag">SATIRE • APRIL FOOLS</div>
+  </div>
+
+  <div class="wrap">
+    <div class="notice">
+      APRIL FOOLS — This page is a joke/parody and not a real news report.
+    </div>
+
+    <article class="hero">
+      <div class="hero-head">
+        <div class="kicker">Breaking-ish</div>
+        <h1>Travis Kelce and Taylor Swift Broke Up?!</h1>
+        <div class="sub">
+          Fans were shocked for approximately three seconds… until they noticed the giant
+          <span class="highlight">APRIL FOOLS</span> labels everywhere.
+        </div>
+        <div class="meta">Published April 1 • For laughs only</div>
+      </div>
+
+      <div class="image">
+        <div class="stamp">APRIL FOOLS</div>
+        <div class="image-inner">
+          Put a photo or screenshot here if you want — or leave this as a dramatic headline card.
+        </div>
+      </div>
+
+      <div class="content">
+        <p>
+          In today’s completely unserious celebrity update, rumors swirled that Travis Kelce and Taylor Swift had called it quits.
+          Social media gasped, group chats exploded, and then everyone remembered what day it is.
+        </p>
+
+        <p>
+          That’s right: <span class="highlight">April Fools.</span> This page is intentionally designed as a parody celebrity-news story.
+          It is not affiliated with TMZ and is not presenting real reporting.
+        </p>
+
+        <p>
+          The headline is the prank. The punchline is the giant disclaimer. Please do not take this as factual news.
+        </p>
+
+        <div class="btns">
+          <a class="btn primary" href="#" onclick="alert('APRIL FOOLS 😄'); return false;">Reveal the Joke</a>
+          <a class="btn secondary" href="#" onclick="window.print(); return false;">Print / Save</a>
+        </div>
+
+        <div class="small">
+          Note: This is a satire page inspired by celebrity-news layouts, not a copy of any real outlet.
+        </div>
+      </div>
+    </article>
+
+    <div class="footer">
+      Made as a parody webpage for fun.
+    </div>
+  </div>
+</body>
+</html>
